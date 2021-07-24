@@ -52,6 +52,7 @@ namespace SC2_Prophet
             // Read settings
             ReadSettings();
             ScanOCRModels();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -110,17 +111,9 @@ namespace SC2_Prophet
                 //int X1 = (int)(RES_X * 0.0561848955); // 145; // First row, first commander X - from the left
                 //int Y1 = (int)(RES_Y * 0.2827546288);// 409; // First row, first commander Y - from the top
 
-                // Rocno popravljeni koeficienti:
                 int X1 = (int)(RES_X * nudResXCoef.Value); // 145; // First row, first commander X - from the left
                 int Y1 = (int)(RES_Y * nudResYCoef.Value);// 409; // First row, first commander Y - from the top
-
-                //X1 = 145; Y1 = 410; 
-
-                // 1440p
-                // TOCNE KOORDINATE: +5,5: 148, 412
-                // VISINA CRKE: 13
-                // SIRINA CRKE: 15
-
+               
 
                 int X_DIFF = (int)(RES_X * nudDiffXCoef.Value); // 96; // Difference to the next commander, moving right
                 int Y_DIFF = (int)(RES_Y * nudDiffYCoef.Value); // 137; // Difference to the next commander, moving down (next row)
@@ -152,7 +145,7 @@ namespace SC2_Prophet
                 Bitmap levelsImage = null;
                 Bitmap levelsImageOriginal = null;
 
-                int offset1 = (int) nudColorToleranceDefault.Value; //45 dela OK ce je border dobro nastavljen, za 1080p 
+                int offset1 = (int) nudColorToleranceDefault.Value;
                 int offset2 = (int) nudColorToleranceSelected.Value;
 
                 for (int commander = 0; commander < COMMANDER_COUNT; commander++)

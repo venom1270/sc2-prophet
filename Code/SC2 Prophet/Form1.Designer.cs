@@ -535,7 +535,7 @@
             this.tbResX.Name = "tbResX";
             this.tbResX.Size = new System.Drawing.Size(40, 22);
             this.tbResX.TabIndex = 41;
-            this.tbResX.Text = "2560";
+            this.tbResX.Text = "1920";
             // 
             // tbResY
             // 
@@ -545,7 +545,7 @@
             this.tbResY.Name = "tbResY";
             this.tbResY.Size = new System.Drawing.Size(40, 22);
             this.tbResY.TabIndex = 42;
-            this.tbResY.Text = "1440";
+            this.tbResY.Text = "1080";
             // 
             // label3
             // 
